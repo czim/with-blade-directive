@@ -1,7 +1,6 @@
 <?php
-namespace App\Providers;
+namespace Czim\WithBladeDirective;
 
-use Czim\WithBladeDirective\RegistersWithDirective;
 use Illuminate\Support\ServiceProvider;
 
 class WithBladeDirectiveServiceProvider extends ServiceProvider
