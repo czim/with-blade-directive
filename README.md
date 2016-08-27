@@ -37,6 +37,11 @@ Via Composer
 $ composer require czim/with-blade-directive
 ```
 
+Then add the service provider in `config/app.php`:
+
+    Czim\WithBladeDirective\WithBladeDirectiveServiceProvider::class,
+    
+
 ## Usage
 
 The `@with` directive supports two formats:
