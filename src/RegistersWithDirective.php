@@ -20,11 +20,11 @@ trait RegistersWithDirective
             $asSyntaxPart     = '\s*(?<expression>.*)\s*as\s*\$(?<name>[a-z_]+)\s*';
 
             if ($isBracketed) {
-                $regexStringSyntax = '#^\(' . $stringSyntaxPart . '\)$#';
-                $regexAsSyntax     = '#^\(' . $asSyntaxPart . '\)$#i';
+                $regexStringSyntax = '#^\(' . $stringSyntaxPart . '\)$#s';
+                $regexAsSyntax     = '#^\(' . $asSyntaxPart . '\)$#is';
             } else {
-                $regexStringSyntax = '#^' . $stringSyntaxPart . '$#';
-                $regexAsSyntax     = '#^' . $asSyntaxPart . '$#i';
+                $regexStringSyntax = '#^' . $stringSyntaxPart . '$#s';
+                $regexAsSyntax     = '#^' . $asSyntaxPart . '$#is';
             }
 
             if (    ! preg_match($regexStringSyntax, $arguments, $matches)
